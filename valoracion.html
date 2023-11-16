@@ -1,0 +1,87 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valoración del Servicio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4CAF50;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #FF9B00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #E08800;
+    }
+  </style>
+</head>
+<body bgcolor=#FFF0A6>
+
+  <header>
+    <h1><font color=#FF9B00>Valoración del Servicio</font></h1>
+    <p>¡Queremos saber tu opinión! Valorar nuestro servicio y deja tus recomendaciones.</p>
+  </header>
+
+  <form action="procesar_valoracion.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="valoracion">Valoración:</label>
+    <select id="valoracion" name="valoracion" required>
+      <option value="5">Excelente</option>
+      <option value="4">Muy Bueno</option>
+      <option value="3">Bueno</option>
+      <option value="2">Regular</option>
+      <option value="1">Malo</option>
+    </select>
+
+    <label for="recomendaciones">Recomendaciones:</label>
+    <textarea id="recomendaciones" name="recomendaciones" rows="4"></textarea>
+
+    <input type="submit" value="Enviar Valoración">
+  </form>
+
+  <footer>
+    <p>© 2023 Heroes de la Salud. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

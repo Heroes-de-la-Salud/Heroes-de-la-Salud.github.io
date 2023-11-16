@@ -1,0 +1,210 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Noviembre 2023</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #787878;
+    }
+  </style>
+</head>
+<body bgcolor=#C4C4C4>
+
+  <h2>Planes</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Planes</th>
+        <th>Información</th>
+        <th>Costo</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td bgcolor=#FFFFFF><b>Paquete de Consultoría Gratuito</b></td>
+        <td bgcolor=#FFFFFF>Este servicio es gratuito, ya que se trata de una sesión inicial para evaluar las necesidades del cliente. La intención es proporcionar un valor inicial sin costo.</td>
+        <td bgcolor=#FFFFFF><b>Gratuito</b></td>
+       
+<tr>
+        <td bgcolor=#FFFFFF><b>Descuento por Servicios Combinados</b></td>
+        <td bgcolor=#FFFFFF>Los precios pueden variar, pero podrías ofrecer descuentos que van desde el 10% hasta el 30% dependiendo de la combinación de servicios y la duración del compromiso.</td>
+        <td bgcolor=#FFFFFF><b>500,000 COP a 2,000,000 COP mensuales</b></td>
+    
+<tr>
+        <td bgcolor=#FFFFFF><b>Webinars Educativos Gratuitos</b></td>
+        <td bgcolor=#FFFFFF>Este servicio es gratuito para los participantes, pero el costo para tu empresa estaría asociado con la planificación, la creación del contenido y la promoción del webinar.</td>
+        <td bgcolor=#FFFFFF><b>Gratuito</b></td>
+        
+<tr>
+        <td bgcolor=#FFFFFF><b>Mes de Prueba Gratuito</b></td>
+        <td bgcolor=#FFFFFF>Ofrecer un mes de prueba gratuito puede tener un costo para tu empresa, pero puede ser una inversión valiosa para adquirir nuevos clientes. Asegúrate de calcular tus costos internos antes de implementar esta oferta.</td>
+        <td bgcolor=#FFFFFF><b>Despues del mes, 1,000,000 COP a 5,000,000 COP</b></td>
+        
+<tr>
+        <td bgcolor=#FFFFFF><b>Concursos en Redes Sociales</b></td>
+        <td bgcolor=#FFFFFF>Los costos pueden incluir el premio del concurso y los gastos asociados con la promoción del concurso en las redes sociales.</td>
+        <td bgcolor=#FFFFFF><b>Gratuito</b></td>
+     
+<tr>
+        <td bgcolor=#FFFFFF><b>Programa de Referidos</b></td>
+        <td bgcolor=#FFFFFF>Puedes ofrecer descuentos que van desde el 10% hasta el 20% en futuros servicios por cada referencia exitosa que genere una venta.</td>
+        <td bgcolor=#FFFFFF><b>100,000 COP a 500,000 COP por cada referencia exitosa.</b></td>
+
+<tr>
+        <td bgcolor=#FFFFFF><b>Auditoría Gratuita de Marketing</b></td>
+        <td bgcolor=#FFFFFF>Este servicio es gratuito y se utiliza como una estrategia para atraer nuevos clientes. Sin embargo, ten en cuenta que hay costos asociados con el tiempo y los recursos utilizados para realizar la auditoría.</td>
+        <td bgcolor=#FFFFFF><b>Gratuito</b></td>
+
+    </tbody>
+  </table>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Selección y Pago</title>
+    <!-- Agrega el script de Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4CAF50;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #868686;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #797979;
+    }
+  </style>
+</head>
+<body>
+
+    <h2>Selección y Pago</h2>
+
+    <form id="formulario-pago">
+        <label for="seleccion">Selecciona un plan:</label>
+        <select id="seleccion" name="seleccion" required>
+            <option value="servicio1">Seleccionar</option>
+            <option value="servicio1">Paquete de Consultoría Gratuito</option>
+            <option value="servicio2">Descuento por Servicios Combinados</option>
+            <option value="servicio1">Webinars Educativos Gratuitos</option>
+            <option value="servicio2">Mes de Prueba Gratuito</option>
+            <option value="servicio1">Concursos en Redes Sociales</option>
+            <option value="servicio2">Programa de Referidos</option>
+            <option value="servicio2">Auditoría Gratuita de Marketing</option>
+
+        </select>
+ <input type="submit" value="Pagar ahora">
+    </form>
+
+    <!-- Script JavaScript para manejar el pago con Stripe -->
+    <script>
+        // Agrega tu clave pública de Stripe aquí
+        const clavePublicaStripe = 'tu_clave_publica_stripe';
+
+        // Configuración de Stripe
+        const stripe = Stripe(clavePublicaStripe);
+        const elements = stripe.elements();
+
+        // Crear un objeto de elementos de Stripe
+        const style = {
+            base: {
+                fontSize: '16px',
+                color: '#32325d',
+            },
+        };
+
+        const card = elements.create('card', { style });
+
+        // Montar el elemento de la tarjeta en el contenedor con el ID 'card-element'
+        card.mount('#card-element');
+
+        // Manejar el evento del botón de pago
+        document.getElementById('boton-pago').addEventListener('click', function () {
+            // Hacer una solicitud a tu servidor para crear un pago
+            // (deberás implementar esta lógica del lado del servidor)
+            // Después de crear el pago en el servidor, redirige al cliente a la URL de pago
+            // Aquí deberías tener una ruta en tu servidor que inicie el pago con Stripe y devuelva la URL de pago
+            fetch('/crear_pago', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    servicio: document.getElementById('seleccion').value,
+                    // Puedes agregar más información del cliente según sea necesario
+                }),
+            })
+            .then(response => response.json())
+            .then(session => {
+                // Redirigir al cliente a la página de pago de Stripe
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .then(result => {
+                if (result.error) {
+                    // Manejar errores durante el proceso de pago
+                    alert(result.error.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>

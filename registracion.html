@@ -1,0 +1,70 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #FF6B3F;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF5320;
+        }
+    </style>
+</head>
+<body bgcolor=#FFAD95>
+
+    <h2><font color=#FF3A00>Registro de Empresas</font></h2>
+
+    <form action="/registrar_empresa" method="post">
+        <label for="nombre_empresa">Nombre de la Empresa:</label>
+        <input type="text" id="nombre_empresa" name="nombre_empresa" required>
+
+        <label for="sector_empresa">Sector de la Empresa:</label>
+        <select id="sector_empresa" name="sector_empresa" required>
+            <option value="tecnologia">Tecnología</option>
+            <option value="salud">Salud</option>
+            <option value="servicios">Servicios</option>
+            <!-- Agrega más opciones según sea necesario -->
+
+        </select>
+
+        <label for="correo_empresa">Correo Electrónico:</label>
+        <input type="email" id="correo_empresa" name="correo_empresa" required>
+
+        <label for="telefono_empresa">Número de Teléfono:</label>
+        <input type="tel" id="telefono_empresa" name="telefono_empresa" required>
+
+        <button type="submit">Registrar Empresa</button>
+    </form>
+
+</body>
+</html>
